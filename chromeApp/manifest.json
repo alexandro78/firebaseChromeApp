@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "chromeApp",
+  "description": "Base Level Extension",
+  "version": "1.0",
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "permissions": [
+    "webNavigation",
+    "tabs"
+  ],
+  "content_scripts": [
+   {
+     "matches": ["https://www.youtube.com/*"],
+     "js": ["content-script.js"]
+   }
+ ]
+
+}
